@@ -15,6 +15,10 @@ public class ArraysOfString {
       strings[4] = "Сыр сулугуни";
       String text = String.format("%s и %s = хорошая еда",strings[1],strings[4]);
       System.out.println(text);
+
+      for (String string  : strings ) {
+          System.out.println(string);
+      }
   }
 
 }
