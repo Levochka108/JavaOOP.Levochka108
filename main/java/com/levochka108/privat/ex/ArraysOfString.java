@@ -15,6 +15,18 @@ public class ArraysOfString {
       strings[4] = "Сыр сулугуни";
       String text = String.format("%s и %s = хорошая еда",strings[1],strings[4]);
       System.out.println(text);
+      for(String string : strings){
+          System.out.println(string);
+      }
+      int[] numbers1={1,2,3};
+      int sum =0;
+      for (int x : numbers1){
+          sum = sum+x;
+      }
+      System.out.println(sum);
+
+      int value = 0;
+      String str;
   }
 
 }
