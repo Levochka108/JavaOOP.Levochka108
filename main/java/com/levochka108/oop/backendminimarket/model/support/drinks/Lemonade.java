@@ -1,8 +1,13 @@
-package com.levochka108.oop.backendminimarket.model.support.drinks;
+package main.java.com.levochka108.oop.backendminimarket.model.support.drinks;
 
-import com.levochka108.oop.backendminimarket.model.support.Drinks;
+import main.java.com.levochka108.oop.backendminimarket.model.support.Drinks;
 
 public class Lemonade extends Drinks {
-    boolean sugar;
+    private boolean sugar;
+
+    public Lemonade(String name, double price, int count, double measure, int volumeProduct, boolean sugar) {
+        super(name, price, count, measure, volumeProduct);
+    }
+
 
 }
