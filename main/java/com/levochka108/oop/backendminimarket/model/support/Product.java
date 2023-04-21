@@ -20,6 +20,15 @@ public class Product {
 
     }
 
+    @Override
+    public String toString() {
+        return "Продукт: {(" +
+                "Наименование:" + getNameProduct() +")("+
+                "Цена продукта:" + getPriceProduct() +")("+
+                "Количество продукта:" + getCountProduct() +")("+
+                "Единица измерения:" +getMeasureProduct() +
+                ")}";
+    }
 
     public static String getNameProduct() {
         return nameProduct;
