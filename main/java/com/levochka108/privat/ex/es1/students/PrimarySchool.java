@@ -1,7 +1,7 @@
-package com.levochka108.oop.es1.students;
+package com.levochka108.privat.ex.es1.students;
 
-import com.levochka108.oop.es1.students.basestudents.IGamer;
-import com.levochka108.oop.es1.Student;
+import com.levochka108.privat.ex.es1.students.basestudents.IGamer;
+import com.levochka108.privat.ex.es1.Student;
 
 public class PrimarySchool  extends Student implements IGamer {
 

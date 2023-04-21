@@ -1,4 +1,4 @@
-package com.levochka108.oop.es1;
+package com.levochka108.privat.ex.es1;
 
 public abstract class Student {
     private String fullName;

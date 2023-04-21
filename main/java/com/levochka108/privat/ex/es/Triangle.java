@@ -1,4 +1,4 @@
-package com.levochka108.oop.es;
+package com.levochka108.privat.ex.es;
 
 public record Triangle(int first, int second, int third) {
 

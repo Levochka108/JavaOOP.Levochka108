@@ -1,4 +1,4 @@
-package com.levochka108.oop.carpark;
+package com.levochka108.privat.ex.carpark;
 
 public class Car extends Vehicle {
 

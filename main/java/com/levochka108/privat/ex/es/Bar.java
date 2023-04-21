@@ -1,4 +1,4 @@
-package com.levochka108.oop.es;
+package com.levochka108.privat.ex.es;
 
 public class Bar {
     public void doSomething(){
