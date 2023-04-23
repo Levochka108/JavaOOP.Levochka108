@@ -1,6 +1,6 @@
-package com.levochka108.privat.ex.es2;
+package java.com.levochka108.privat.ex.es2;
 
-public class TwoPlayersGame extends Game {
+public class TwoPlayersGame extends com.levochka108.privat.ex.es2.Game {
     private final String playerName1;
     private final String playerName2;
 

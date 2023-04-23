@@ -1,6 +1,7 @@
-package main.java.com.levochka108.oop.backendminimarket.model.support;
+package java.com.levochka108.oop.backendminimarket.model.support;
 
-import main.java.com.levochka108.oop.backendminimarket.model.support.Product;
+
+import java.com.levochka108.oop.backendminimarket.model.support.Product;
 
 public class FoodItems extends Product {
     /**

@@ -1,11 +1,10 @@
-package main.java.com.levochka108.oop.backendminimarket.model.support.deli;
+package java.com.levochka108.oop.backendminimarket.model.support.deli;
 
-import main.java.com.levochka108.oop.backendminimarket.model.support.FoodItems;
 
+import java.com.levochka108.oop.backendminimarket.model.support.FoodItems;
 
 public class Egg extends FoodItems {
-    int UnitOnPackage;
-
+    int unitOnPackage;
     /**
      * Продукты питания (Съедобное)
      *
@@ -15,7 +14,8 @@ public class Egg extends FoodItems {
      * @param measure
      * @param productExpirationDate
      */
-    public Egg(String name, double price, int count, double measure, int productExpirationDate) {
+    public Egg(String name, double price, int count, double measure, int productExpirationDate,int unitOnPack) {
         super(name, price, count, measure, productExpirationDate);
+        this.unitOnPackage = unitOnPack;
     }
 }

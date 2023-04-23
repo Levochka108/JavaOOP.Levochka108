@@ -1,4 +1,4 @@
-package main.java.com.levochka108.oop.backendminimarket.model.support.household;
+package java.com.levochka108.oop.backendminimarket.model.support.household;
 
 import main.java.com.levochka108.oop.backendminimarket.model.support.NonEdibleProducts;
 

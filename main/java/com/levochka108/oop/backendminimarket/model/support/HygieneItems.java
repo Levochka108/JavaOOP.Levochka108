@@ -1,4 +1,4 @@
-package main.java.com.levochka108.oop.backendminimarket.model.support;
+package java.com.levochka108.oop.backendminimarket.model.support;
 
 public class HygieneItems extends Product {
     int unitInPackage;
