@@ -1,5 +1,6 @@
 package main.java.com.levochka108.oop.backendminimarket.model.support.dairy;
 
+
 import main.java.com.levochka108.oop.backendminimarket.model.support.Drinks;
 
 public class Milk extends Drinks {
@@ -7,5 +8,13 @@ public class Milk extends Drinks {
 
     public Milk(String name, double price, int count, double measure, int volumeProduct, double fatPercentage) {
         super(name, price, count, measure, volumeProduct);
+        this.fatPercentage = fatPercentage;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString().replace("}", " жирность молока: " + fatPercentage + "}");
     }
 }
+
+

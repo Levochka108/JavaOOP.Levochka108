@@ -1,4 +1,4 @@
-package com.levochka108.privat.ex.es1.students;
+package java.com.levochka108.privat.ex.es1.students;
 
 import com.levochka108.privat.ex.es1.students.basestudents.IGamer;
 import com.levochka108.privat.ex.es1.Student;
@@ -9,16 +9,18 @@ public class PrimarySchool  extends Student implements IGamer {
         super(fullName, classNumber);
     }
 
+    @Override
+    public void study() {
+
+    }
+
     protected void extraClasses(){
     System.out.println("Хочу на куржок по информатике.");
 }
-    @Override
-    public void game() {
-        System.out.println("Играю в настольные игры.");
-    }
+
 
     @Override
-    public void study() {
+    public void game() {
 
     }
 }

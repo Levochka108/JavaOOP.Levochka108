@@ -5,5 +5,11 @@ public class HygieneItems extends Product {
 
     public HygieneItems(String name, double price, int count, double measure, int unitInPackage) {
         super(name, price, count, measure);
+        this.unitInPackage = unitInPackage;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString().replace("}", "количество в упаковке: " + unitInPackage + '}');
     }
 }

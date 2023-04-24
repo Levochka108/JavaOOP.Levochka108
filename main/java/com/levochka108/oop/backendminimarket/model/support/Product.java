@@ -1,16 +1,10 @@
 package main.java.com.levochka108.oop.backendminimarket.model.support;
 
-/**
- * Родительский класс обьекта продукт
- */
 public class Product {
+    private static double measureProduct;
     private static String nameProduct;
     private static double priceProduct;
     private static int countProduct;
-    /**
-     * Единица измерения
-     */
-    private static double measureProduct;
 
     public Product(String name, double price, int count, double measure) {
         nameProduct = name;
@@ -20,46 +14,39 @@ public class Product {
 
     }
 
-    @Override
-    public String toString() {
-        return "Продукт: {(" +
-                "Наименование:" + getNameProduct() +")("+
-                "Цена продукта:" + getPriceProduct() +")("+
-                "Количество продукта:" + getCountProduct() +")("+
-                "Единица измерения:" +getMeasureProduct() +
-                ")}";
-    }
-
-    public static String getNameProduct() {
-        return nameProduct;
-    }
-
-    public static void setNameProduct(String nameProduct) {
+    public void setNameProduct(String nameProduct) {
         Product.nameProduct = nameProduct;
     }
 
-    public static double getPriceProduct() {
+    public double getPriceProduct() {
         return priceProduct;
     }
 
-    public static void setPriceProduct(double priceProduct) {
+    public void setPriceProduct(double priceProduct) {
         Product.priceProduct = priceProduct;
     }
 
-    public static int getCountProduct() {
+    public int getCountProduct() {
         return countProduct;
     }
 
-    public static void setCountProduct(int countProduct) {
+    public void setCountProduct(int countProduct) {
         Product.countProduct = countProduct;
     }
 
-    public static double getMeasureProduct() {
+    public double getMeasureProduct() {
         return measureProduct;
     }
 
-    public static void setMeasureProduct(double measureProduct) {
+    public void setMeasureProduct(double measureProduct) {
         Product.measureProduct = measureProduct;
     }
 
+    @Override
+    public String toString() {
+        return "Продукт: {Название: " + nameProduct +
+                ", цена продукта: " + priceProduct +
+                ", счет продукта: " + countProduct +
+                ", единица измерения: " + measureProduct + "}";
+    }
 }
