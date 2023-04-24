@@ -34,6 +34,8 @@ public class Animal implements IAnimal {
 
     }
 
+
+
     @Override
     public void getVoice() {
 
