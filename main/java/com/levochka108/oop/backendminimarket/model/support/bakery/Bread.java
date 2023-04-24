@@ -23,7 +23,7 @@ public class Bread extends FoodItems {
 
     @Override
     public String toString() {
-        return super.toString().replace("}", "в составе хлеба: тип муки: " + flourType +
+        return super.toString().replace("}", ", в составе хлеба: тип муки: " + flourType +
                 ", в составе сахар: " + sugar +
                 ", в составе молоко: " + milk +
                 ", в сосатве яйца: " + egg +
