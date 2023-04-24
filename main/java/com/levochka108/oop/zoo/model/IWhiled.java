@@ -1,6 +1,9 @@
 package main.java.com.levochka108.oop.zoo.model;
 
 public interface IWhiled extends IAnimal{
+    String placeOfResidence();
+
+    String dateFound();
 
     @Override
     String animalGrowth();
