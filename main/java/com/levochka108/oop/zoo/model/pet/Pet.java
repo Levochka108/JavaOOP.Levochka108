@@ -1,9 +1,11 @@
 package main.java.com.levochka108.oop.zoo.model.pet;
 
+import main.java.com.levochka108.oop.zoo.model.Animal;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Pet {
+public abstract class Pet extends Animal {
     private final String namePet;
     private final String breedPet;
 
@@ -13,7 +15,29 @@ public class Pet {
 
     private final Date datePet;
 
-    public Pet(String namePet, String breedPet, String habitsPet, String colorPet, Date datePet) {
+    public String getNamePet() {
+        return namePet;
+    }
+
+    public String getBreedPet() {
+        return breedPet;
+    }
+
+    public String getHabitsPet() {
+        return habitsPet;
+    }
+
+    public String getColorPet() {
+        return colorPet;
+    }
+
+    public Date getDatePet() {
+        return datePet;
+    }
+
+
+    public Pet(int heightAnimal, int weightAnimal, String colorAnimal, String namePet, String breedPet, String habitsPet, String colorPet, Date datePet) {
+        super(heightAnimal, weightAnimal, colorAnimal);
         this.namePet = namePet;
         this.breedPet = breedPet;
         this.habitsPet = habitsPet;
@@ -21,15 +45,5 @@ public class Pet {
         this.datePet = datePet;
     }
 
-    @Override
-    public String toString() {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
-        return "Pet{" +
-                "namePet='" + namePet + '\'' +
-                ", breedPet='" + breedPet + '\'' +
-                ", habitsPet='" + habitsPet + '\'' +
-                ", colorPet='" + colorPet + '\'' +
-                ", datePet=" + dateFormat.format(datePet) +
-                '}';
-    }
+    public abstract void showInfo();
 }
