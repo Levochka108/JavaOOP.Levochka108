@@ -1,10 +1,17 @@
-package main.java.com.levochka108.oop.zoo.model;
+package com.levochka108.oop.zoo.model.pet;
 
-public interface IWhiled extends IAnimal{
-    String placeOfResidence();
+import com.levochka108.oop.zoo.model.IAnimal;
 
-    String dateFound();
+import java.util.Date;
 
+public interface IPet extends IAnimal {
+    String namePet();
+    String breedPet();
+    String animalHabits();
+    String coatColor();
+    Date birthData();
+
+    void showAffection();
     @Override
     String animalGrowth();
 

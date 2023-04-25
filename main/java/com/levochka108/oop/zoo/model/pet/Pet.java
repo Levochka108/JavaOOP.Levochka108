@@ -1,8 +1,6 @@
-package main.java.com.levochka108.oop.zoo.model.pet;
+package com.levochka108.oop.zoo.model.pet;
 
-import main.java.com.levochka108.oop.zoo.model.Animal;
-
-import java.text.SimpleDateFormat;
+import com.levochka108.oop.zoo.model.Animal;
 import java.util.Date;
 
 public abstract class Pet extends Animal {
