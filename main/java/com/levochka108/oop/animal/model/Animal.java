@@ -1,4 +1,4 @@
-package com.levochka108.oop.zoo.model;
+package com.levochka108.oop.animal.model;
 
 
 

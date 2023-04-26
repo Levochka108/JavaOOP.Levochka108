@@ -1,6 +1,7 @@
-package com.levochka108.oop.zoo.model.pet;
+package com.levochka108.oop.animal.model.pet;
 
-import com.levochka108.oop.zoo.model.Animal;
+import com.levochka108.oop.animal.model.Animal;
+
 import java.util.Date;
 
 public abstract class Pet extends Animal {

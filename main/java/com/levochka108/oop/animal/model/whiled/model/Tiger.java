@@ -1,6 +1,6 @@
-package com.levochka108.oop.zoo.model.whiled.model;
+package com.levochka108.oop.animal.model.whiled.model;
 
-import com.levochka108.oop.zoo.model.whiled.IWhiled;
+import com.levochka108.oop.animal.model.whiled.IWhiled;
 
 public class Tiger implements IWhiled {
     @Override

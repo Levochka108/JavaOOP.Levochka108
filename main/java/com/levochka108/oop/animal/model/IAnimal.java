@@ -1,4 +1,4 @@
-package com.levochka108.oop.zoo.model;
+package com.levochka108.oop.animal.model;
 /**
  * На языке Java реализовать интерфейс "Животное" со следующими полями:
  * 1.Рост животного

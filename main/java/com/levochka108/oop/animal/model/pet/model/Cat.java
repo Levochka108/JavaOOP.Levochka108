@@ -1,8 +1,8 @@
-package com.levochka108.oop.zoo.model.pet.model;
+package com.levochka108.oop.animal.model.pet.model;
 
 
-import com.levochka108.oop.zoo.model.pet.IPet;
-import com.levochka108.oop.zoo.model.pet.model.coloreyes.ColorEyes;
+import com.levochka108.oop.animal.model.pet.model.coloreyes.ColorEyes;
+import com.levochka108.oop.animal.model.pet.IPet;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -74,5 +74,13 @@ public class Cat implements IPet {
     @Override
     public void showInfo(String info) {
         IPet.super.showInfo(info);
+    }
+
+    public String getGrowthCat() {
+        return growthCat;
+    }
+
+    public void setGrowthCat(String growthCat) {
+        this.growthCat = growthCat;
     }
 }
