@@ -1,6 +1,7 @@
 package com.levochka108.oop.animal.model.pet.model;
 
-import com.levochka108.oop.animal.model.pet.IPet;
+import com.levochka108.oop.animal.model.interfaces.ipet.IPet;
+import com.levochka108.oop.animal.model.pet.model.voice.VoiceDog;
 
 import java.util.Date;
 
@@ -65,7 +66,7 @@ public class Dog implements IPet {
 
     @Override
     public void getVoice(String vice) {
-        IPet.super.getVoice(vice);
+        IPet.super.getVoice(String.valueOf(VoiceDog.GAW));
     }
 
     @Override

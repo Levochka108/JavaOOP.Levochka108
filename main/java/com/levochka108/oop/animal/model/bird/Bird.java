@@ -13,8 +13,8 @@ public abstract class Bird {
 
     public String flight( int x) {
         x = this.flightAltitude();
-        String rs = String.valueOf(x);
-        return "Я лечу на " + rs + " метрах, где " + rs + "- высота полета";
+        String pointX = String.valueOf(x);
+        return "Я лечу на " + pointX + " метрах, где " + pointX + "- высота полета";
     }
 
     public abstract int flightAltitude();

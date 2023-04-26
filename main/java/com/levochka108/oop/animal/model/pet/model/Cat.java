@@ -1,8 +1,9 @@
 package com.levochka108.oop.animal.model.pet.model;
 
 
-import com.levochka108.oop.animal.model.pet.model.coloreyes.ColorEyes;
-import com.levochka108.oop.animal.model.pet.IPet;
+import com.levochka108.oop.animal.model.pet.model.coloreyes.ColorEyesPet;
+import com.levochka108.oop.animal.model.interfaces.ipet.IPet;
+import com.levochka108.oop.animal.model.pet.model.voice.VoiceCat;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -63,12 +64,12 @@ public class Cat implements IPet {
 
     @Override
     public String animalEyeColor() {
-        return String.valueOf(ColorEyes.PASTELGREEN);
+        return String.valueOf(ColorEyesPet.PASTELGREEN);
     }
 
     @Override
     public void getVoice(String vice) {
-        IPet.super.getVoice("Meow, Meow.");
+        IPet.super.getVoice(String.valueOf(VoiceCat.MEOW));
     }
 
     @Override

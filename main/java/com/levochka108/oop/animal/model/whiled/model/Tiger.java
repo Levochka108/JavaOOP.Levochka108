@@ -1,6 +1,7 @@
 package com.levochka108.oop.animal.model.whiled.model;
 
-import com.levochka108.oop.animal.model.whiled.IWhiled;
+import com.levochka108.oop.animal.model.interfaces.iwhiled.IWhiled;
+import com.levochka108.oop.animal.model.whiled.model.voice.VoiceTiger;
 
 public class Tiger implements IWhiled {
     @Override
@@ -35,7 +36,7 @@ public class Tiger implements IWhiled {
 
     @Override
     public void getVoice(String vice) {
-        IWhiled.super.getVoice(vice);
+        IWhiled.super.getVoice(String.valueOf(VoiceTiger.AUF));
     }
 
     @Override
