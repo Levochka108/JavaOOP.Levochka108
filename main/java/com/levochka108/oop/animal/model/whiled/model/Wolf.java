@@ -1,6 +1,7 @@
 package com.levochka108.oop.animal.model.whiled.model;
 
 import com.levochka108.oop.animal.model.interfaces.iwhiled.IWhiled;
+import com.levochka108.oop.animal.model.whiled.model.coloreyes.ColorEyesWhiled;
 import com.levochka108.oop.animal.model.whiled.model.voice.VoiceWolf;
 
 public class Wolf implements IWhiled {
@@ -41,7 +42,7 @@ public class Wolf implements IWhiled {
 
     @Override
     public String animalEyeColor() {
-        return null;
+        return String.valueOf(ColorEyesWhiled.BROWN);
     }
 
     @Override

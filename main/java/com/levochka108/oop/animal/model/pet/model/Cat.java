@@ -1,6 +1,7 @@
 package com.levochka108.oop.animal.model.pet.model;
 
 
+import com.levochka108.oop.animal.model.pet.Pet;
 import com.levochka108.oop.animal.model.pet.model.coloreyes.ColorEyesPet;
 import com.levochka108.oop.animal.model.interfaces.ipet.IPet;
 import com.levochka108.oop.animal.model.pet.model.voice.VoiceCat;
@@ -8,7 +9,7 @@ import com.levochka108.oop.animal.model.pet.model.voice.VoiceCat;
 import java.util.Calendar;
 import java.util.Date;
 
-public class Cat implements IPet {
+public class Cat extends Pet implements IPet {
     private  boolean haveWool;
     private String ginger;
     private String leva;
@@ -20,6 +21,8 @@ public class Cat implements IPet {
     public boolean isNoWool(){
         return false;
     }
+
+
 
 
     @Override
@@ -83,5 +86,10 @@ public class Cat implements IPet {
 
     public void setGrowthCat(String growthCat) {
         this.growthCat = growthCat;
+    }
+
+    @Override
+    public void devotion() {
+        System.out.println("Преданно люблю хозяина.");
     }
 }

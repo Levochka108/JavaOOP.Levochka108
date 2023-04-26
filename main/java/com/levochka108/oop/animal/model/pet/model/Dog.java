@@ -1,11 +1,12 @@
 package com.levochka108.oop.animal.model.pet.model;
 
 import com.levochka108.oop.animal.model.interfaces.ipet.IPet;
+import com.levochka108.oop.animal.model.pet.Pet;
 import com.levochka108.oop.animal.model.pet.model.voice.VoiceDog;
 
 import java.util.Date;
 
-public class Dog implements IPet {
+public class Dog extends Pet implements IPet {
     private boolean educatedDog;
 
     private boolean trainThisDog;
@@ -76,5 +77,10 @@ public class Dog implements IPet {
 
     public void setTrainThisDog(boolean trainThisDog) {
         this.trainThisDog = trainThisDog;
+    }
+
+    @Override
+    public void devotion() {
+        System.out.println("Предан только одному хозяну, люблю с ним играит и гулять.");
     }
 }
