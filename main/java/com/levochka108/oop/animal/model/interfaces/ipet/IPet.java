@@ -6,17 +6,22 @@ import java.util.Date;
 
 public interface IPet extends IAnimal {
     String namePet();
+
     String breedPet();
-    String animalHabits();
+
+    boolean animalVaccination();
+
     String coatColor();
+
     Date birthData();
 
     void showAffection();
-    @Override
-    String animalGrowth();
 
     @Override
-    String animalWeight();
+    int animalGrowth();
+
+    @Override
+    int animalWeight();
 
     @Override
     String animalEyeColor();

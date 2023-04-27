@@ -1,53 +1,64 @@
 package com.levochka108.oop.animal.model.pet.model;
 
 
+import com.levochka108.oop.animal.model.interfaces.ipet.IPet;
 import com.levochka108.oop.animal.model.pet.Pet;
 import com.levochka108.oop.animal.model.pet.model.coloreyes.ColorEyesPet;
-import com.levochka108.oop.animal.model.interfaces.ipet.IPet;
 import com.levochka108.oop.animal.model.pet.model.voice.VoiceCat;
 
 import java.util.Calendar;
 import java.util.Date;
 
 public class Cat extends Pet implements IPet {
-    private  boolean haveWool;
-    private String ginger;
-    private String leva;
+    private final String breedPet;
+    private boolean haveWool;
+    private String colorPet;
+    private String name;
     private String growthCat;
     private String weightCat;
+
+    private String vaccinationPet;
+
     public boolean isHaveWool() {
         return true;
     }
-    public boolean isNoWool(){
+
+    public boolean isNoWool() {
         return false;
     }
 
-
-
+    public Cat(String petName,String petBreed, boolean petWool, String petColor, String petGrowth, String petWeight) {
+        this.haveWool = petWool;
+        this.colorPet = petColor;
+        this.name = petName;
+        this.growthCat = petGrowth;
+        this.weightCat = petWeight;
+        this.breedPet = petBreed;
+    }
 
     @Override
     public String namePet() {
-        return leva;
+        return name;
     }
 
     @Override
     public String breedPet() {
-        return null;
+        return breedPet;
     }
 
     @Override
-    public String animalHabits() {
-        return null;
+    public boolean animalVaccination() {
+        return false;
     }
 
     @Override
     public String coatColor() {
-        return ginger;
+        return colorPet;
     }
 
     @Override
     public Date birthData() {
-        return new Date(111, Calendar.FEBRUARY,11);
+        return new Date(111, Calendar.FEBRUARY, 11);
     }
 
     @Override
@@ -56,14 +67,15 @@ public class Cat extends Pet implements IPet {
     }
 
     @Override
-    public String animalGrowth() {
-        return growthCat = String.valueOf(25);
+    public int animalGrowth() {
+        return 0;
     }
 
     @Override
-    public String animalWeight() {
-        return String.valueOf(5);
+    public int animalWeight() {
+        return 0;
     }
+
 
     @Override
     public String animalEyeColor() {

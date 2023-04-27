@@ -11,11 +11,12 @@ public abstract class Bird {
         this.flight = flight;
     }
 
-    public String flight( int x) {
+    public String toFlight( int x) {
         x = this.flightAltitude();
         String pointX = String.valueOf(x);
         return "Я лечу на " + pointX + " метрах, где " + pointX + "- высота полета";
     }
 
     public abstract int flightAltitude();
+
 }
