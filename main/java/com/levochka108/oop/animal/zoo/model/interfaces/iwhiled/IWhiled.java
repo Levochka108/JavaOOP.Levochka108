@@ -20,12 +20,12 @@ public interface IWhiled extends IAnimal {
     String animalEyeColor();
 
     @Override
-    default void getVoice(String vice) {
-        IAnimal.super.getVoice(vice);
+    default void getVoice() {
+        IAnimal.super.getVoice();
     }
 
     @Override
-    default void showInfo(String info) {
-        IAnimal.super.showInfo(info);
+    default void showInfo() {
+        IAnimal.super.showInfo();
     }
 }

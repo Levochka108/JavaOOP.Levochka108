@@ -1,7 +1,7 @@
 package com.levochka108.oop.animal.zoo.model.bird.pet.model;
 
 import com.levochka108.oop.animal.zoo.model.bird.Bird;
-import com.levochka108.oop.animal.zoo.model.bird.pet.model.coloreyes.ColorEyesBird;
+import com.levochka108.oop.animal.zoo.model.bird.coloreyes.ColorEyesBird;
 import com.levochka108.oop.animal.zoo.model.bird.voice.Voice;
 import com.levochka108.oop.animal.zoo.model.interfaces.ipet.IPet;
 
