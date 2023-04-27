@@ -1,4 +1,4 @@
-package main.java.com.levochka108.oop.backendminimarket.model.support.toiletries;
+package com.levochka108.oop.backendminimarket.model.support.toiletries;
 
 
 import main.java.com.levochka108.oop.backendminimarket.model.support.Product;
