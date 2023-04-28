@@ -56,12 +56,12 @@ public class Tiger implements IWhiled {
     }
 
     @Override
-    public void getVoice(String vice) {
-        IWhiled.super.getVoice(String.valueOf(VoiceTiger.AUF));
+    public void getVoice() {
+        ;
     }
 
     @Override
-    public void showInfo(String info) {
-        IWhiled.super.showInfo(info);
+    public void showInfo() {
+        ;
     }
 }

@@ -17,6 +17,8 @@ public class Cat extends Pet implements IPet {
     private final int growthCat;
     private final int weightCat;
 
+    private final String showAffectionPet;
+
     private final boolean vaccinationPet;
 
 
@@ -29,7 +31,7 @@ public class Cat extends Pet implements IPet {
         return woolPet;
     }
 
-    public Cat(String petName,Date petData,boolean vaccination,String petBreed, boolean petWool, String petColor, int petGrowth, int petWeight) {
+    public Cat(String petName,Date petData,boolean vaccination,String petBreed, boolean petWool, String petColor, int petGrowth, int petWeight, String showAffection) {
         this.woolPet = petWool;
         this.colorPet = petColor;
         this.name = petName;
@@ -38,7 +40,7 @@ public class Cat extends Pet implements IPet {
         this.growthCat = petGrowth;
         this.weightCat = petWeight;
         this.breedPet = petBreed;
-
+        this.showAffectionPet = showAffection;
     }
 
     @Override
@@ -68,7 +70,7 @@ public class Cat extends Pet implements IPet {
 
     @Override
     public void showAffection() {
-        System.out.println("Любит поспать, покушать мнямс, своенравный характей, пугливый.");
+        System.out.println(showAffectionPet);
     }
 
     @Override
@@ -88,13 +90,23 @@ public class Cat extends Pet implements IPet {
     }
 
     @Override
-    public void getVoice(String vice) {
-        IPet.super.getVoice(String.valueOf(VoiceCat.MEOW));
+    public void getVoice() {
+        VoiceCat meow = VoiceCat.MEOW;
+        System.out.println(meow);
     }
 
     @Override
-    public void showInfo(String info) {
-        IPet.super.showInfo(info);
+    public void showInfo() {
+        System.out.println("Кот домашний{" +
+                "Имя='" + name + '\'' +
+                ", дата рождения=" + datePet +
+                ", порода курицы='" + breedPet + '\'' +
+                ", наличие прививок=" + vaccinationPet +
+                ", повадки жевотного='" +
+                ", рост птицы=" + growthCat +
+                ", вес птицы=" + weightCat +
+                ", цвет глаз курицы=" +
+                '}');;
     }
 
     @Override

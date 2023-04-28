@@ -1,6 +1,4 @@
 package com.levochka108.oop.animal.zoo.model.interfaces.ipet;
-
-import com.levochka108.oop.animal.zoo.model.bird.pet.model.voice.VoiceChicken;
 import com.levochka108.oop.animal.zoo.model.interfaces.IAnimal;
 
 import java.util.Date;
