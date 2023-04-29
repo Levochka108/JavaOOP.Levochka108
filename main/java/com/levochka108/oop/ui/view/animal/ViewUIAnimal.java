@@ -19,7 +19,7 @@ public class ViewUIAnimal {
         return !choice.equals("2");
     }
 
-    private  String filterChoice() {
+    public  String showMenu() {
         System.out.println("Enter filter: ");
         System.out.println("1 -> Добавить животное в зоопарк;");
         System.out.println("2 -> Уберает животное с его индексем из зоопарка;");
@@ -34,14 +34,5 @@ public class ViewUIAnimal {
             return "Please, repeat command.";
         }
         return choice;
-    }
-
-    public void showMenu() {
-        System.out.println("1. Добавить животное в зоопарк" +
-                "2. Уберает животное с его индексем из зоопарка" +
-                "3. Посмотреть иформацию о животном с его индексом" +
-                "4. Заставить животное с его индексом издать звук" +
-                "5. Напечатать интормацию про всех животных в зоопарке" +
-                "6. Заставить всех живоных издать звук, которые есть в зоопарке");
     }
 }
