@@ -1,5 +1,8 @@
 package com.levochka108.oop.animal.zoo.model.interfaces.ipet;
+<<<<<<< HEAD
 
+=======
+>>>>>>> ab353cff6e5ddde376238e10db54b03843b60793
 import com.levochka108.oop.animal.zoo.model.interfaces.IAnimal;
 
 import java.util.Date;

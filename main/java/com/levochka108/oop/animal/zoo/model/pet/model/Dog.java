@@ -87,13 +87,13 @@ public class Dog extends Pet implements IPet {
     }
 
     @Override
-    public void getVoice(String vice) {
-        IPet.super.getVoice(String.valueOf(VoiceDog.GAW));
+    public void getVoice() {
+        System.out.println(VoiceDog.GAW);
     }
 
     @Override
-    public void showInfo(String info) {
-        IPet.super.showInfo(info);
+    public void showInfo() {
+
     }
 
     @Override

@@ -9,13 +9,13 @@ import java.util.Date;
 public class Wolf implements IWhiled {
     private final String nameWiledAnimal;
 
-    private final  String placeResidence;
+    private final String placeResidence;
 
     private final Date dateFoundWhiledAnimal;
 
     private final int animalGrowth;
 
-    private final int  animalWeight;
+    private final int animalWeight;
     private final boolean wolfLeader;
 
     public Wolf(String nameAnimal, String placeResidence, Date dateFoundWhiledAnimal, int animalGrowth, int animalWeight, boolean wolfLeader) {
@@ -63,12 +63,14 @@ public class Wolf implements IWhiled {
     }
 
     @Override
-    public void getVoice(String vice) {
-        IWhiled.super.getVoice(String.valueOf(VoiceWolf.Woof));
+    public void getVoice() {
+        ;
     }
 
     @Override
-    public void showInfo(String info) {
-        IWhiled.super.showInfo(info);
+    public void showInfo() {
     }
+
+
 }
+
