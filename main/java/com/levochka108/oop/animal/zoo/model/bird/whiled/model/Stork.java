@@ -2,88 +2,67 @@ package com.levochka108.oop.animal.zoo.model.bird.whiled.model;
 
 import com.levochka108.oop.animal.zoo.model.bird.Bird;
 import com.levochka108.oop.animal.zoo.model.bird.coloreyes.ColorEyesBird;
-import com.levochka108.oop.animal.zoo.model.bird.voice.Voice;
 import com.levochka108.oop.animal.zoo.model.interfaces.iwhiled.IWhiled;
 
-import java.util.Date;
+import java.time.LocalDate;
 
-public class Stork  extends Bird  implements IWhiled {
-    private final String nameWiledAnimal;
-    private final Date dateFoundAnimal;
+public class Stork extends Bird implements IWhiled {
+    private String name;
+    private double height;
 
-    private final String breedAnimal;
+    private double weight;
 
+    private String habitat;
 
+    private LocalDate dateOfDiscovery;
 
-    private final int growthAnimal;
-
-    private final int weightAnimal;
-
-    private final int flightAltitudeAnimal;
-
-
-
-    protected Stork(String flight, String animalName, Date foundAnimalDate, String breedAnimal, int growthAnimal, int weightAnimal, int flightAltitudeAnimal) {
-        super(flight);
-        this.nameWiledAnimal = animalName;
-        this.dateFoundAnimal = foundAnimalDate;
-        this.breedAnimal = breedAnimal;
-        this.growthAnimal = growthAnimal;
-        this.weightAnimal = weightAnimal;
-        this.flightAltitudeAnimal = flightAltitudeAnimal;
+    public Stork(String storkName, double storkHeight, double storkWeight, String storkHabitat, double flightHeight, LocalDate storkDateOfDiscovery) {
+        super(flightHeight);
+        this.name = storkName;
+        this.height = storkHeight;
+        this.weight = storkWeight;
+        this.habitat = storkHabitat;
+        this.dateOfDiscovery = storkDateOfDiscovery;
     }
 
     @Override
-    public int flightAltitude() {
-        return flightAltitudeAnimal;
-    }
-
-
-    @Override
-    public String nameWiledAnimal() {
-        return nameWiledAnimal;
+    public double getHeight() {
+        return height;
     }
 
     @Override
-    public String placeOfResidence() {
-        return null;
+    public double getWeight() {
+        return weight;
     }
 
     @Override
-    public Date dateFound() {
-        return dateFoundAnimal;
+    public String getEyeColor() {
+        return String.valueOf(ColorEyesBird.BROWN);
     }
 
     @Override
-    public int animalGrowth() {
-        return growthAnimal;
+    public void makeSound() {
+        System.out.println("Taps its beak.");
     }
 
     @Override
-    public int animalWeight() {
-        return weightAnimal;
+    public void printInfo() {
+        System.out.println("Name: " + name);
+        System.out.println("Habitat: " + habitat);
+        System.out.println("Date of discovery: " + dateOfDiscovery);
+        System.out.println("Height: " + getHeight() + " cm");
+        System.out.println("Weight: " + getWeight() + " kg");
+        System.out.println("Eye color: " + getEyeColor());
+        System.out.println("Flight height: " + flightHeight + " meters");
     }
 
     @Override
-    public String animalEyeColor() {
-        return String.valueOf(ColorEyesBird.PASTELGREEN);
+    public String getHabitat() {
+        return habitat;
     }
 
     @Override
-    public void getVoice() {
-        System.out.println(Voice.StorkClicksItsBeak);
-    }
-
-    @Override
-    public void showInfo() {
-        System.out.println("Аист дикий{" +
-                "Имя='" + nameWiledAnimal + '\'' +
-                ", дата нахождения=" + dateFoundAnimal +
-                ", порода аиста='" + breedAnimal + '\'' +
-                ", рост птицы=" + growthAnimal +
-                ", вес птицы=" + weightAnimal +
-                ", цвет глаз курицы=" + animalEyeColor()+
-                ", высота полета птицы=" + flightAltitude() +
-                '}');
+    public LocalDate getDateOfDiscovery() {
+        return dateOfDiscovery;
     }
 }

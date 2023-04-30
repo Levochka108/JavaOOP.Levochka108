@@ -1,67 +1,49 @@
 package com.levochka108.oop.animal.zoo.model.whiled.model;
 
 import com.levochka108.oop.animal.zoo.model.interfaces.iwhiled.IWhiled;
-import com.levochka108.oop.animal.zoo.model.whiled.model.coloreyes.ColorEyesWhiled;
-import com.levochka108.oop.animal.zoo.model.whiled.model.voice.VoiceTiger;
 
-import java.util.Date;
+
+import java.time.LocalDate;
+
 
 public class Tiger implements IWhiled {
-    private final String nameWhiledAnimal;
+    private String name;
+    private double height;
+    private double weight;
+    private String eyeColor;
+    private String habitat;
+    private LocalDate dateOfDiscovery;
 
-    private final String placeResidence;
+    public Tiger(String nameTiger,double height, double weight, String eyeColor, String habitat,
+                 LocalDate dateOfDiscovery) {
+        this.height = height;
+        this.weight = weight;
+        this.eyeColor = eyeColor;
+        this.habitat = habitat;
+        this.dateOfDiscovery = dateOfDiscovery;
+        this.name = nameTiger;
+    }
 
-    private final Date dateFoundWhiledAnimal;
+    public double getHeight() { return height; }
+    public double getWeight() { return weight; }
+    public String getEyeColor() { return eyeColor; }
 
-    private final int animalGrowth;
-     private final  int animalWeight;
-
-    public Tiger(String nameAnimal, String residenceAnimal, Date dateFoundAnimal, int growthAnimal,int weightAnimal ) {
-        this.nameWhiledAnimal = nameAnimal;
-        this.placeResidence = residenceAnimal;
-        this.dateFoundWhiledAnimal = dateFoundAnimal;
-        this.animalGrowth = growthAnimal;
-        this.animalWeight = weightAnimal;
-
+    @Override
+    public void makeSound() {
+        System.out.println(name+" Roar!");
     }
 
     @Override
-    public String nameWiledAnimal() {
-        return nameWhiledAnimal;
+    public void printInfo() {
+        System.out.println("Height: " + getHeight() + " cm");
+        System.out.println("Weight: " + getWeight() + " kg");
+        System.out.println("Eye color: " + getEyeColor());
+        System.out.println("Habitat: " + getHabitat());
+        System.out.println("Date of discovery: " + getDateOfDiscovery());
+
     }
 
-    @Override
-    public String placeOfResidence() {
-        return placeResidence;
-    }
+    public String getHabitat() { return habitat; }
+    public LocalDate getDateOfDiscovery() { return dateOfDiscovery;}
 
-    @Override
-    public Date dateFound() {
-        return dateFoundWhiledAnimal;
-    }
-
-    @Override
-    public int animalGrowth() {
-        return animalGrowth;
-    }
-
-    @Override
-    public int animalWeight() {
-        return animalWeight;
-    }
-
-    @Override
-    public String animalEyeColor() {
-        return String.valueOf(ColorEyesWhiled.BROWN);
-    }
-
-    @Override
-    public void getVoice() {
-        ;
-    }
-
-    @Override
-    public void showInfo() {
-        ;
-    }
 }

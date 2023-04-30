@@ -2,116 +2,82 @@ package com.levochka108.oop.animal.zoo.model.pet.model;
 
 
 import com.levochka108.oop.animal.zoo.model.interfaces.ipet.IPet;
-import com.levochka108.oop.animal.zoo.model.pet.Pet;
 import com.levochka108.oop.animal.zoo.model.pet.model.coloreyes.ColorEyesPet;
-import com.levochka108.oop.animal.zoo.model.pet.model.voice.VoiceCat;
 
-import java.util.Date;
+import java.time.LocalDate;
 
-public class Cat extends Pet implements IPet {
-    private final String breedPet;
-    private final boolean woolPet;
-    private final String colorPet;
-    private final String name;
-    private final Date datePet;
-    private final int growthCat;
-    private final int weightCat;
+public class Cat implements IPet {
+    private double height;
+    private double weight;
+    private String eyeColor;
+    private String name;
+    private String breed;
+    private boolean vaccinations;
+    private String furColor;
+    private LocalDate birthDate;
 
-    private final String showAffectionPet;
-
-    private final boolean vaccinationPet;
-
-
-
-    public boolean isHaveWool() {
-        return woolPet;
+    public Cat(String name,LocalDate catBDate, double height, double weight, String eyeColor,  String breed, String furColor,
+               boolean vaccinations) {
+        this.height = height;
+        this.weight = weight;
+        this.eyeColor = eyeColor;
+        this.name = name;
+        this.breed = breed;
+        this.vaccinations = vaccinations;
+        this.furColor = furColor;
+        this.birthDate = catBDate;
     }
 
-    public boolean isNoWool() {
-        return woolPet;
+    public double getHeight() {
+        return height;
     }
 
-    public Cat(String petName,Date petData,boolean vaccination,String petBreed, boolean petWool, String petColor, int petGrowth, int petWeight, String showAffection) {
-        this.woolPet = petWool;
-        this.colorPet = petColor;
-        this.name = petName;
-        this.datePet = petData;
-        this.vaccinationPet = vaccination;
-        this.growthCat = petGrowth;
-        this.weightCat = petWeight;
-        this.breedPet = petBreed;
-        this.showAffectionPet = showAffection;
+    public double getWeight() {
+        return weight;
     }
 
-    @Override
-    public String namePet() {
-        return name;
-    }
-
-    @Override
-    public String breedPet() {
-        return breedPet;
-    }
-
-    @Override
-    public boolean animalVaccination() {
-        return vaccinationPet;
-    }
-
-    @Override
-    public String coatColor() {
-        return colorPet;
-    }
-
-    @Override
-    public Date birthData() {
-        return datePet;
-    }
-
-    @Override
-    public void showAffection() {
-        System.out.println(showAffectionPet);
-    }
-
-    @Override
-    public int animalGrowth() {
-        return growthCat;
-    }
-
-    @Override
-    public int animalWeight() {
-        return weightCat;
-    }
-
-
-    @Override
-    public String animalEyeColor() {
+    public String getEyeColor() {
         return String.valueOf(ColorEyesPet.PASTELGREEN);
     }
 
-    @Override
-    public void getVoice() {
-        VoiceCat meow = VoiceCat.MEOW;
-        System.out.println(meow);
+    public String getName() {
+        return name;
     }
 
-    @Override
-    public void showInfo() {
-        System.out.println("Кот домашний{" +
-                "Имя='" + name + '\'' +
-                ", дата рождения=" + datePet +
-                ", порода курицы='" + breedPet + '\'' +
-                ", наличие прививок=" + vaccinationPet +
-                ", повадки жевотного='" +
-                ", рост птицы=" + growthCat +
-                ", вес птицы=" + weightCat +
-                ", цвет глаз курицы=" +
-                '}');;
+    public String getBreed() {
+        return breed;
     }
 
-    @Override
-    public void devotion() {
-        System.out.println("Преданно люблю хозяина.");
+    public boolean hasVaccinations() {
+        return vaccinations;
     }
 
+    public String getFurColor() {
+        return furColor;
+    }
+
+    public LocalDate getBirthDate() {
+        return birthDate;
+    }
+
+    public void showAffection() {
+        System.out.println(name + " purrs and rubs against your leg.");
+    }
+
+    public void makeSound() {
+        System.out.println(name + " Meows!");
+    }
+
+    public void printInfo() {
+        System.out.println("Cat:");
+        System.out.println("Name: " + name);
+        System.out.println("Breed: " + breed);
+        System.out.println("Height: " + height + " cm");
+        System.out.println("Weight: " + weight + " kg");
+        System.out.println("Eye color: " + eyeColor);
+        System.out.println("Fur color: " + furColor);
+        System.out.println("Birth date: " + birthDate);
+        System.out.println("Vaccinations: " + (vaccinations ? "Yes" : "No"));
+    }
 }
+

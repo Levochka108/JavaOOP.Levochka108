@@ -1,103 +1,97 @@
 package com.levochka108.oop.animal.zoo.model.pet.model;
 
 import com.levochka108.oop.animal.zoo.model.interfaces.ipet.IPet;
-import com.levochka108.oop.animal.zoo.model.pet.Pet;
 import com.levochka108.oop.animal.zoo.model.pet.model.coloreyes.ColorEyesPet;
-import com.levochka108.oop.animal.zoo.model.pet.model.voice.VoiceDog;
 
-import java.util.Date;
-
-public class Dog extends Pet implements IPet {
-
-    private final String namePet;
-    private final Date datePet;
-
-    private final String breedPet;
-
-    private final String colorPet;
-    private final boolean vaccinationPet;
-    private final boolean educatedDog;
-
-    private final boolean trainingThisDog;
+import java.time.LocalDate;
 
 
-    public Dog(String petName, Date petDate, String breed, String petColor, boolean vaccination, boolean petEducated, boolean dogTraining) {
-        this.educatedDog = petEducated;
-        this.trainingThisDog = dogTraining;
-        this.namePet = petName;
-        this.datePet = petDate;
-        this.breedPet = breed;
-        this.colorPet = petColor;
-        this.vaccinationPet = vaccination;
+public class Dog implements IPet {
+    private String name;
+    private double height;
+    private double weight;
+    private String eyeColor;
+    private String breed;
+    private boolean hasVaccinations;
+    private String furColor;
+    private LocalDate dateOfBirth;
+    private boolean isTrained;
 
+    public Dog(String nameDog, double height, double weight, String eyeColor, String breed,
+               boolean hasVaccinations, String furColor, LocalDate dateOfBirth, boolean trainedDog) {
+        this.height = height;
+        this.weight = weight;
+        this.eyeColor = eyeColor;
+        this.breed = breed;
+        this.hasVaccinations = hasVaccinations;
+        this.furColor = furColor;
+        this.dateOfBirth = dateOfBirth;
+        this.name = nameDog;
+        this.isTrained = trainedDog;
     }
 
-    public boolean thisDogIsEducated() {
-        return educatedDog;
+    public double getHeight() {
+        return height;
     }
 
-    public boolean thisDogIsTrained() {
-        return trainingThisDog;
+    public double getWeight() {
+        return weight;
     }
 
-    @Override
-    public String namePet() {
-        return namePet;
-    }
-
-    @Override
-    public String breedPet() {
-        return breedPet;
-    }
-
-    @Override
-    public boolean animalVaccination() {
-        return vaccinationPet;
-    }
-
-
-    @Override
-    public String coatColor() {
-        return colorPet;
-    }
-
-    @Override
-    public Date birthData() {
-        return datePet;
-    }
-
-    @Override
-    public void showAffection() {
-
-    }
-
-    @Override
-    public int animalGrowth() {
-        return 0;
-    }
-
-    @Override
-    public int animalWeight() {
-        return 0;
-    }
-
-    @Override
-    public String animalEyeColor() {
+    public String getEyeColor() {
         return String.valueOf(ColorEyesPet.BROWN);
     }
 
     @Override
-    public void getVoice() {
-        System.out.println(VoiceDog.GAW);
+    public String getName() {
+        return name;
+    }
+
+    public String getBreed() {
+        return breed;
+    }
+
+    public boolean hasVaccinations() {
+        return hasVaccinations;
+    }
+
+    public String getFurColor() {
+        return furColor;
     }
 
     @Override
-    public void showInfo() {
+    public LocalDate getBirthDate() {
+        return dateOfBirth;
+    }
 
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
     }
 
     @Override
-    public void devotion() {
-        System.out.println("Предан только одному хозяну, люблю с ним играит и гулять.");
+    public void makeSound() {
+        System.out.println(name+" Woof!");
+    }
+
+    public void train() {
+        isTrained = true;
+        System.out.println(getName() + " has been trained!");
+    }
+
+    @Override
+    public void printInfo() {
+        System.out.println("Name: " + name);
+        System.out.println("Height: " + getHeight() + " cm");
+        System.out.println("Weight: " + getWeight() + " kg");
+        System.out.println("Eye color: " + getEyeColor());
+        System.out.println("Breed: " + getBreed());
+        System.out.println("Has vaccinations: " + hasVaccinations());
+        System.out.println("Fur color: " + getFurColor());
+        System.out.println("Date of birth: " + getDateOfBirth());
+        train();
+    }
+
+    public void showAffection() {
+        System.out.println("The dog wags its tail and nuzzles your hand.");
     }
 }

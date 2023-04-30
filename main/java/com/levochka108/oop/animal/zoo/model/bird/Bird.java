@@ -1,22 +1,40 @@
 package com.levochka108.oop.animal.zoo.model.bird;
 
-public abstract class Bird {
-    private final String flight;
+import com.levochka108.oop.animal.zoo.model.interfaces.IAnimal;
 
-    public String getFlight() {
-        return flight;
+public abstract class Bird implements IAnimal {
+    protected double flightHeight;
+
+    protected Bird(double flightHeight) {
+        this.flightHeight = flightHeight;
     }
 
-    protected Bird(String flight) {
-        this.flight = flight;
+    public void fly() {
+        System.out.println("I'm flying at " + flightHeight + " meters");
     }
 
-    public String toFlight( int x) {
-        x = this.flightAltitude();
-        String pointX = String.valueOf(x);
-        return "Я лечу на " + pointX + " метрах, где " + pointX + "- высота полета";
+    @Override
+    public double getHeight() {
+        return 0;
     }
 
-    public abstract int flightAltitude();
+    @Override
+    public double getWeight() {
+        return 0;
+    }
 
+    @Override
+    public String getEyeColor() {
+        return null;
+    }
+
+    @Override
+    public void makeSound() {
+
+    }
+
+    @Override
+    public void printInfo() {
+
+    }
 }

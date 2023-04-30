@@ -7,17 +7,10 @@ package com.levochka108.oop.animal.zoo.model.interfaces;
  * 3.Цвет глаз животного
  */
 public interface IAnimal {
+    double getHeight();
+    double getWeight();
+    String getEyeColor();
+    void makeSound();
+    void printInfo();
 
-    int animalGrowth();
-
-    int animalWeight();
-
-    String animalEyeColor();
-
-    default void getVoice() {
-
-    }
-
-    default void showInfo() {
-    }
 }

@@ -2,108 +2,93 @@ package com.levochka108.oop.animal.zoo.model.bird.pet.model;
 
 import com.levochka108.oop.animal.zoo.model.bird.Bird;
 import com.levochka108.oop.animal.zoo.model.bird.coloreyes.ColorEyesBird;
-import com.levochka108.oop.animal.zoo.model.bird.voice.Voice;
 import com.levochka108.oop.animal.zoo.model.interfaces.ipet.IPet;
 
+import java.time.LocalDate;
 
-import java.util.Date;
 
 public class Chicken extends Bird implements IPet {
+    private String name;
+    private double height;
+    private double weight;
+    private String eyeColor;
 
-    private final String namePet;
-    private final Date datePet;
+    private boolean vaccinations;
+    private LocalDate birthDate;
 
-    private final String breedPet;
+    public Chicken(LocalDate chickenBirthDate,String chickenName, double chickenHeight, double chickenWeight, String chickenColorEye, boolean chickenVaccination, double flightHeight) {
+        super(flightHeight);
+        this.name = chickenName;
+        this.height = chickenHeight;
+        this.weight = chickenWeight;
+        this.eyeColor = chickenColorEye;
+        this.vaccinations = chickenVaccination;
+        this.birthDate = chickenBirthDate;
 
-    private final boolean vaccinationPet;
 
-    private final String showAffectionPet;
-
-    private final int growthPet;
-
-    private final int weightPet;
-
-    protected Chicken(String name, Date petDate,boolean vaccination, String breed, String affection, int growth, int weight, String flightChicken) {
-        super(flightChicken);
-        this.namePet = name;
-        this.datePet = petDate;
-        this.breedPet = breed;
-        this.vaccinationPet = vaccination;
-        this.showAffectionPet = affection;
-        this.growthPet = growth;
-        this.weightPet = weight;
     }
 
     @Override
-    public int flightAltitude() {
-        return 3;
+    public double getHeight() {
+        return height;
     }
 
     @Override
-    public String namePet() {
-        return namePet;
+    public double getWeight() {
+        return weight;
     }
 
     @Override
-    public String breedPet() {
-        return breedPet;
+    public String getEyeColor() {
+        return String.valueOf(ColorEyesBird.BROWN);
     }
 
     @Override
-    public boolean animalVaccination() {
-        return vaccinationPet;
+    public void makeSound() {
+        System.out.println("Cluck cluck");
     }
 
     @Override
-    public String coatColor() {
+    public void printInfo() {
+        System.out.println("Name: " + name);
+        System.out.println("Height: " + getHeight() + " cm");
+        System.out.println("Weight: " + getWeight() + " kg");
+        System.out.println("Eye color: " + getEyeColor());
+        System.out.println("Flight height: " + flightHeight + " meters");
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public String getBreed() {
+        String breed = "Нет породы.";
+        return breed;
+    }
+
+    @Override
+    public boolean hasVaccinations() {
+        return vaccinations;
+    }
+
+    @Override
+    public String getFurColor() {
         return null;
     }
 
 
     @Override
-    public Date birthData() {
-        return datePet;
+    public LocalDate getBirthDate() {
+        return birthDate;
     }
 
     @Override
     public void showAffection() {
-        System.out.println(showAffectionPet);
-    }
+        System.out.println("Hen clucks and key performer from the hands of the owner.");
 
-    @Override
-    public int animalGrowth() {
-        return growthPet;
-    }
-
-
-    @Override
-    public int animalWeight() {
-        return weightPet;
-    }
-
-    @Override
-    public String animalEyeColor() {
-        return String.valueOf(ColorEyesBird.BROWN);
-    }
-
-    @Override
-    public void getVoice() {
-        System.out.println(Voice.KoKoKo);
-    }
-
-    @Override
-    public void showInfo() {
-
-        System.out.println("Курица домашняя{" +
-                "Имя='" + namePet + '\'' +
-                ", дата рождения=" + datePet +
-                ", порода курицы='" + breedPet + '\'' +
-                ", наличие прививок=" + vaccinationPet +
-                ", повадки жевотного='" + showAffectionPet + '\'' +
-                ", рост птицы=" + growthPet +
-                ", вес птицы=" + weightPet +
-                ", цвет глаз курицы=" + animalEyeColor()+
-                ", высота полета птицы=" + flightAltitude() +
-                '}');
     }
 }
+
+

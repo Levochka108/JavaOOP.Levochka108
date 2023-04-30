@@ -2,75 +2,70 @@ package com.levochka108.oop.animal.zoo.model.whiled.model;
 
 import com.levochka108.oop.animal.zoo.model.interfaces.iwhiled.IWhiled;
 import com.levochka108.oop.animal.zoo.model.whiled.model.coloreyes.ColorEyesWhiled;
-import com.levochka108.oop.animal.zoo.model.whiled.model.voice.VoiceWolf;
 
-import java.util.Date;
+import java.time.LocalDate;
+
 
 public class Wolf implements IWhiled {
-    private final String nameWiledAnimal;
+    private String name;
+    private double height;
+    private double weight;
+    private String eyeColor;
+    private String habitat;
+    private LocalDate dateOfDiscovery;
+    private boolean isPackLeader;
 
-    private final String placeResidence;
-
-    private final Date dateFoundWhiledAnimal;
-
-    private final int animalGrowth;
-
-    private final int animalWeight;
-    private final boolean wolfLeader;
-
-    public Wolf(String nameAnimal, String placeResidence, Date dateFoundWhiledAnimal, int animalGrowth, int animalWeight, boolean wolfLeader) {
-        this.nameWiledAnimal = nameAnimal;
-        this.placeResidence = placeResidence;
-        this.dateFoundWhiledAnimal = dateFoundWhiledAnimal;
-        this.animalGrowth = animalGrowth;
-        this.animalWeight = animalWeight;
-        this.wolfLeader = wolfLeader;
+    public Wolf(String nameWolf, double height, double weight, String eyeColor, String habitat,
+                LocalDate dateOfDiscovery, boolean wolfLeader) {
+        this.height = height;
+        this.weight = weight;
+        this.eyeColor = eyeColor;
+        this.habitat = habitat;
+        this.dateOfDiscovery = dateOfDiscovery;
+        this.name = nameWolf;
+        this.isPackLeader = wolfLeader;
     }
 
-    public boolean isWolfLeader() {
-        return wolfLeader;
+    public double getHeight() {
+        return height;
     }
 
-
-    @Override
-    public String nameWiledAnimal() {
-        return nameWiledAnimal;
+    public double getWeight() {
+        return weight;
     }
 
-    @Override
-    public String placeOfResidence() {
-        return placeResidence;
+    public String getEyeColor() {
+        return String.valueOf(ColorEyesWhiled.PASTELGREEN);
     }
 
-    @Override
-    public Date dateFound() {
-        return dateFoundWhiledAnimal;
+    public String getHabitat() {
+        return habitat;
     }
 
-    @Override
-    public int animalGrowth() {
-        return animalGrowth;
+    public LocalDate getDateOfDiscovery() {
+        return dateOfDiscovery;
     }
 
-    @Override
-    public int animalWeight() {
-        return animalWeight;
+    public void setPackLeader(boolean isPackLeader) {
+        this.isPackLeader = isPackLeader;
     }
 
-    @Override
-    public String animalEyeColor() {
-        return String.valueOf(ColorEyesWhiled.BROWN);
+    public boolean isPackLeader() {
+        return isPackLeader;
     }
 
-    @Override
-    public void getVoice() {
-        ;
+    public void makeSound() {
+        System.out.println(name + " Aooooooo!");
     }
 
-    @Override
-    public void showInfo() {
+    public void printInfo() {
+        System.out.println("Name: " + name);
+        System.out.println("Height: " + getHeight() + " cm");
+        System.out.println("Weight: " + getWeight() + " kg");
+        System.out.println("Eye color: " + getEyeColor());
+        System.out.println("Habitat: " + getHabitat());
+        System.out.println("Date of discovery: " + getDateOfDiscovery());
     }
-
 
 }
 
