@@ -1,4 +1,4 @@
-package com.levochka108.privat.ex;
+package com.levochka108.privat.ex.x;
 /**
  * Практика работы с матрицей
  */

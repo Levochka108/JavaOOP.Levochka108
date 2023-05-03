@@ -1,4 +1,4 @@
-package com.levochka108.privat.ex;
+package com.levochka108.privat.ex.x;
 
 
 public class ClassesAndObjects {
