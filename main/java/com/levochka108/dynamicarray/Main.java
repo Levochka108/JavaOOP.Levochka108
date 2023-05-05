@@ -1,8 +1,9 @@
-package com.levochka108.dynamicarray;
+package main.java.com.levochka108.dynamicarray;
 
 
 import com.levochka108.dynamicarray.presenter.Configuration;
-import com.levochka108.dynamicarray.view.MainInterface;
+import main.java.com.levochka108.dynamicarray.view.MainInterface;
+
 
 public class Main {
     public static void main(String[] args) {

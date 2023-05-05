@@ -1,9 +1,10 @@
-package main.java.com.levochka108.oop.calculate.core.CalcClasses;
+package main.java.com.levochka108.oop.calculate.core;
 
+import main.java.com.levochka108.oop.calculate.core.info.IncorrectElementException;
+import main.java.com.levochka108.oop.calculate.core.info.IncorrectTypeException;
 import main.java.com.levochka108.oop.calculate.data.PostfixElement;
 import main.java.com.levochka108.oop.calculate.interfacemodel.IPostfixElementType;
 import main.java.com.levochka108.oop.calculate.model.ComplexNumber;
-import main.java.com.levochka108.oop.calculate.model.IncorrectElementException;
 import main.java.com.levochka108.oop.calculate.model.UnrecognizableElementException;
 
 import java.util.Stack;
@@ -18,18 +19,18 @@ public class PostfixCalculator {
         this.postfixVector = postfixVector;
     }
 
-    public ComplexNumber calculate() throws java.text.ParseException, IncorrectElementException, UnrecognizableElementException {
+    public ComplexNumber calculate() throws java.text.ParseException, IncorrectElementException, UnrecognizableElementException, IncorrectTypeException {
         result = new ComplexNumber("0");
         Stack stack = new Stack<>();
         PostfixElement temp = null;
-        for (int i = 0, i < postfixVector.size();
+        for (int i = 0; i < postfixVector.size();
         i++){
             temp = (PostfixElement) postfixVector.get(i);
             if (temp.isNumber())
                 stack.push(temp);
-            if (temp.isOperator)
+            if (temp.isOperator())
             {
-                ComplexNumber y = ((PostfixElement)stack.pop()).getnumbet();
+                ComplexNumber y = ((PostfixElement)stack.pop()).getNumber();
                 ComplexNumber x = ((PostfixElement)stack.pop()).getNumber();
                 ComplexNumber res = solveOperation(x, y,
                         temp.getOperatorType());

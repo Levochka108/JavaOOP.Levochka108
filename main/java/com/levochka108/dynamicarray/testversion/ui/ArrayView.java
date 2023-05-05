@@ -1,7 +1,8 @@
-package com.levochka108.dynamicarray.testversion.ui;
+package main.java.com.levochka108.dynamicarray.testversion.ui;
 
 
-import com.levochka108.dynamicarray.model.BusinessLogic;
+
+import main.java.com.levochka108.dynamicarray.model.BusinessLogic;
 
 import java.util.Scanner;
 

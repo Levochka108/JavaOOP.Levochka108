@@ -1,7 +1,9 @@
-package com.levochka108.dynamicarray.view;
+package main.java.com.levochka108.dynamicarray.view;
+
+import main.java.com.levochka108.dynamicarray.presenter.CommandLineInterface;
 
 import java.util.Scanner;
-import com.levochka108.dynamicarray.presenter.CommandLineInterface;
+
 
 
 public class MainInterface {

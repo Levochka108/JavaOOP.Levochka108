@@ -1,4 +1,4 @@
-package com.levochka108.dynamicarray.model;
+package main.java.com.levochka108.dynamicarray.model;
 
 
 public class DynamicArray<T> {

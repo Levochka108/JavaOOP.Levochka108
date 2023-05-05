@@ -1,7 +1,9 @@
-package com.levochka108.dynamicarray.presenter;
+package main.java.com.levochka108.dynamicarray.presenter;
 
 
-import com.levochka108.dynamicarray.model.DynamicArray;
+
+
+import main.java.com.levochka108.dynamicarray.model.DynamicArray;
 
 import java.util.Scanner;
 
