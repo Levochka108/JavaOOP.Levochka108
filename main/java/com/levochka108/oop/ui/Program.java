@@ -1,12 +1,14 @@
-package main.java.com.levochka108.oop.ui;
+package com.levochka108.oop.ui;
 
+import com.levochka108.oop.ui.view.animal.ViewUIAnimal;
 
-import main.java.com.levochka108.oop.ui.view.store.ViewUIStore;
 
 public class Program {
     public static void main(String[] args) {
-        ViewUIStore ui = new ViewUIStore();
-        ui.stringMessage();
-    }
 
+        ViewUIAnimal uiAnimal = new ViewUIAnimal();
+        uiAnimal.consoleMenu();
+
+
+    }
 }

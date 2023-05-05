@@ -1,4 +1,4 @@
-package main.java.com.levochka108.oop.backendminimarket.model.support.babyproducts;
+package com.levochka108.oop.backendminimarket.model.support.babyproducts;
 
 
 import main.java.com.levochka108.oop.backendminimarket.model.support.ProductsForBaby;

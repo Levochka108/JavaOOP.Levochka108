@@ -1,4 +1,4 @@
-package main.java.com.levochka108.oop.backendminimarket.model.support.veganproduct;
+package com.levochka108.oop.backendminimarket.model.support.veganproduct;
 
 
 import main.java.com.levochka108.oop.backendminimarket.model.support.FoodItems;

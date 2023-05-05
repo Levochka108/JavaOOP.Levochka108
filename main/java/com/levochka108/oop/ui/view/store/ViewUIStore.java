@@ -1,4 +1,4 @@
-package main.java.com.levochka108.oop.ui.view.store;
+package com.levochka108.oop.ui.view.store;
 
 public class ViewUIStore {
 
