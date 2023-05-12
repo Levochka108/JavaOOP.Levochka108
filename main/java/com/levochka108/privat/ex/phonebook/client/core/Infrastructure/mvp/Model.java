@@ -1,4 +1,4 @@
-package com.levochka108.privat.ex.phonebook.client.core.Infrastructure.mvp;
+/*package com.levochka108.privat.ex.phonebook.client.core.Infrastructure.mvp;
 
 import com.levochka108.privat.ex.phonebook.client.core.Infrastructure.Phonebook;
 import com.levochka108.privat.ex.phonebook.client.core.Infrastructure.models.Contact;
@@ -46,4 +46,8 @@ public class Model {
         }
     }
 
-}
+    public void setCurrentIndex(int i) {
+    }
+
+    // public Phonebook currentBook() {
+}*/

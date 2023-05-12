@@ -1,3 +1,4 @@
+/*
 package com.levochka108.privat.ex.phonebook.client.ui;
 
 import com.levochka108.privat.ex.phonebook.client.Config;
@@ -40,3 +41,4 @@ public class App {
 
     }
 }
+*/

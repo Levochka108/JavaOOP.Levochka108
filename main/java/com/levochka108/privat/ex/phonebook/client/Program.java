@@ -1,3 +1,4 @@
+/*
 package com.levochka108.privat.ex.phonebook.client;
 
 import com.levochka108.privat.ex.phonebook.client.ui.App;
@@ -10,3 +11,4 @@ public class Program {
 
     }
 }
+*/

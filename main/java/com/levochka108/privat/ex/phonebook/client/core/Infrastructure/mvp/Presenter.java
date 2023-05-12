@@ -1,5 +1,8 @@
 package com.levochka108.privat.ex.phonebook.client.core.Infrastructure.mvp;
 
+import com.levochka108.privat.ex.phonebook.client.core.Infrastructure.models.Contact;
+
+/*
 public class Presenter {
     private Model model;
     private ViewPhoneBook view;
@@ -47,4 +50,5 @@ public class Presenter {
             view.setLastName(temp.lastName);
             view.setDescription(temp.description);
         }
-}
+    }
+}*/

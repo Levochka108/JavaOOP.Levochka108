@@ -1,6 +1,6 @@
 package com.levochka108.privat.ex.presenter;
 
-import com.levochka108.newcalculate.view.IModel;
+import com.levochka108.newcalculate.model.interfacemodel.IModel;
 import com.levochka108.privat.ex.presenter.view.View;
 
 public class Presenter {

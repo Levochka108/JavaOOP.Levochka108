@@ -1,6 +1,6 @@
 package com.levochka108.newcalculate.model;
 
-public class Complex {
+public class Complex  {
     private double real;
     private double imaginary;
 

@@ -1,4 +1,4 @@
-package com.levochka108.newcalculate.view;
+package com.levochka108.newcalculate.model.interfacemodel;
 
 public interface IModel {
     int result();
