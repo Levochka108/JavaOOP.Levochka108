@@ -1,4 +1,4 @@
-package com.levochka108.newphonebook;
+package com.levochka108.newphonebook.app;
 
 public class Contact {
 private String fullName;
